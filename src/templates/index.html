@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</header>
+
+<body class="wrapper">
+    <h2>BERT Summarizer</h2>
+    <div>
+        <label for="task">Task:</label>
+        <select name="task" id="task">
+            <option value="extractive">extractive</option>
+            <option value="abstractive">abstractive</option>
+        </select>
+    </div>
+    <textarea class="content" id="content" placeholder="Type (or paste) here..." name="Content" cols="100"
+        rows="30"></textarea>
+    <textarea class="generated" id="generated" placeholder="Result goes here..." name="generated" cols="100"
+        rows="30"></textarea>
+    <div class="submit">
+        <button id="submit">Generate</button>
+    </div>
+</body>
+
+<footer class="foot">
+    <b>Da Nang University of Technology</b><br>
+    Information Technology Faculty<br>
+    Student: Nguyen Tran Hau.
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+
+</html>
